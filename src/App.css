@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    text-shadow: #000 0px 0px;;
+    
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("./assets/loja1.png");
+    background-position: center bottom;  /* puxa a imagem para baixo */
+    background-repeat: no-repeat;
+    background-size: cover;              /* faz a imagem cobrir todo o fundo */
+}
+

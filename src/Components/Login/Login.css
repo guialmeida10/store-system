@@ -1,0 +1,157 @@
+
+.container {
+   width: 450px;
+   background-color: rgba(255, 255, 255, 0.15);
+   backdrop-filter: blur(10px);
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   padding: 40px;
+   border-radius: 10px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.container .input-field {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 18px auto;
+}
+
+.input-field input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px;
+}
+
+.input-field input::placeholder {
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-field .icon{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+}
+
+.container .recall-forget{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: -8px 0 10px;
+}
+
+.recall-forget label {
+    color: #fff;
+}
+
+.recall-forget input[type="checkbox"] {
+    vertical-align: middle; /* garante alinhamento com o texto */
+    margin: 0 1px 1px 0; /* espaçamento à direita do checkbox */
+}
+.recall-forget a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.signup-link p a{
+    color: #eebeff;
+}
+
+.recall-forget a:hover, .signup-link p a :hover {
+    text-decoration: underline;
+}
+
+.container button {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: none;
+}
+
+.container button:hover {
+    background-color: #cfb8ef;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+button:disabled {
+  background: rgb(151, 84, 222);
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background: rgb(151, 84, 222);  /* impede mudar a cor no hover */
+  cursor: not-allowed;
+}
+
+.container .signup-link {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0 10px;
+    color: #ffffff;
+
+}
+
+/* Media query para telas com largura máxima de 480px (celulares) */
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* ocupa quase toda a largura da tela */
+        padding: 15px; /* reduz o padding */
+        border-radius: 8px;
+    }
+
+    .container h1 {
+        font-size: 24px; /* diminui o tamanho do título */
+    }
+
+    .input-field {
+        height: 45px; /* reduz a altura do campo */
+        margin: 20px auto;
+    }
+
+    .input-field input {
+        height: 100%;
+        font-size: 14px; /* fonte menor */
+        padding: 0px 40px;
+    }
+
+    .input-field .icon {
+        font-size: 16px; /* ícone menor */
+        left: 12px;
+    }
+
+    .recall-forget {
+        font-size: 10px;  
+    }
+
+    .container button {
+        height: 45px; /* botão menor */
+        font-size: 14px;
+    }
+
+    .container .signup-link {
+        font-size: 14px;
+        margin: 15px 0 10px;
+    }
+}
