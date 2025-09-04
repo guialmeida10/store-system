@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <video src="loginvideo.mp4" controls width="600"></video>
+  <img src="loginvideo.gif" controls width="600"></img>
 </p>
 
 <p align="center">
