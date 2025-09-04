@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="loginvideo.gif" controls width="600"></img>
+https://github.com/user-attachments/assets/e23650d8-9618-48a4-a8cd-986f4d51896f
 </p>
 
 <p align="center">
