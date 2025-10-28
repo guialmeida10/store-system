@@ -1,70 +1,163 @@
-<h1 align="center"> 🔐 Login System </h1>
+<h1 align="center">🔐 Login System | Full Stack</h1>
 
 <p align="center">
-  Projeto desenvolvido em <strong>ReactJS</strong> com <strong>Vite</strong>, focado em criar uma interface de autenticação moderna, responsiva e funcional.  
-  O sistema conta com tela de login, opção de lembrar credenciais e link para cadastro de novos usuários.  
+  <img src="https://img.shields.io/badge/ReactJS-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge"/>
 </p>
 
 <p align="center">
-
-
-https://github.com/user-attachments/assets/106046ad-3107-4d8e-bab4-80e2909adb75
-
-
+  Projeto Full Stack desenvolvido em <strong>ReactJS (Frontend)</strong> e <strong>Node.js com Express (Backend)</strong>,
+  focado em criar um sistema de autenticação robusto, responsivo e funcional, utilizando <strong>MySQL</strong> como banco de dados.
 </p>
 
 <p align="center">
-  <a href="#-tecnologias">🛠️ Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">📘 Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licença">📝 Licença</a>
+  <img src="./src/assets/inicio.png" alt="Tela inicial do sistema" width="700px">
+  <br><em>Tela de login</em>
+</p>
+
+<p align="center">
+  <img src="./src/assets/registrar.png" alt="Tela de registro do sistema" width="700px">
+  <br><em>Tela de registro</em>
+</p>
+
+<p align="center">
+  <img src="./src/assets/dashboard.png" alt="Dashboard protegida" width="700px">
+  <br><em>Painel principal - Loja</em>
+</p>
+
+<p align="center">
+  <img src="./src/assets/db.png" alt="Estrutura do banco de dados MySQL" width="700px">
+  <br><em>Banco de dados MySQL</em>
+</p>
+
+<p align="center">
+  <em>Em breve colocarei um vídeo descritivo</em>
+</p>
+
+
+<p align="center">
+  <a href="#-tecnologias">🛠️ Tecnologias</a> • 
+  <a href="#-arquitetura">🧱 Arquitetura</a> • 
+  <a href="#-funcionalidades">✨ Funcionalidades</a> • 
+  <a href="#️-rodando-o-projeto">▶️ Rodando o Projeto</a> • 
+  <a href="#-autor">✍️ Autor</a>
 </p>
 
 ---
 
 ## 🛠️ Tecnologias
 
-As principais ferramentas utilizadas foram:
+As principais ferramentas e linguagens utilizadas neste projeto **Full Stack** são:
 
-- **ReactJS + Vite**
-- **HTML5, CSS3**
-- **Visual Studio Code**
-- **Git & GitHub**
+### 🎨 Frontend
+- ⚛️ **ReactJS + Vite** — Criação da interface do usuário.
+- 🌐 **Axios** — Gerenciamento de requisições HTTP.
+- 💥 **HTML5 + CSS3** — Estrutura e estilização responsiva.
 
----
-
-## 📘 Projeto
-
-O **Login System** foi desenvolvido como exercício prático em **desenvolvimento web**.  
-Ele conta com:
-
-### Funcionalidades
-- 👤 Tela de autenticação com **usuário e senha**  
-- 🔒 Campo de **senha protegida**  
-- ✅ Opção "Lembrar-me"  
-- 🔑 Link para recuperação de senha  
-- 📝 Link para registro de novos usuários  
-- 🎨 Design responsivo e moderno  
+### ⚙️ Backend & Banco de Dados
+- 🟩 **Node.js (Express)** — Criação da API RESTful.
+- 🐬 **MySQL2** — Conexão e manipulação do banco de dados.
+- 🔑 **JSON Web Token (JWT)** — Autenticação via token.
+- 🔒 **Bcrypt.js** — Criptografia de senhas.
+- ⚙️ **Dotenv** — Gerenciamento de variáveis de ambiente.
 
 ---
 
-## 🚧 Status
+## 🧱 Arquitetura
 
-🚀 Projeto em desenvolvimento, aberto a melhorias como:
-- Integração com banco de dados  
-- Autenticação real com API  
-- Validações mais robustas  
+O projeto é estruturado em formato **Monorepo Simples**, com duas camadas principais:
+
+```
+📂 Login/
+ ┣ 📁 src/          → Código do Frontend (ReactJS)
+ ┣ 📁 api.login/    → Servidor Express (Backend)
+ ┣ 📄 package.json  → Dependências e scripts de execução
+ ┗ 📄 README.md     → Documentação do projeto
+```
+
+A execução local é feita através do script:
+```
+npm run start-fullstack
+```
+> Esse comando utiliza **concurrently** para iniciar o Frontend e o Backend simultaneamente.
+
+---
+
+## ✨ Funcionalidades
+
+O sistema conta com **autenticação real e segura**, incluindo:
+
+✅ **Tela de Login** — Validação de usuário via API.  
+📝 **Tela de Registro** — Criação de novos usuários com senha criptografada no banco.  
+🔒 **Validação JWT** — Proteção de rotas e sessões autenticadas.  
+🧩 **Dashboard Protegido** — Acesso restrito a usuários logados.  
+📱 **Design Responsivo e Moderno** — Compatível com dispositivos móveis.  
+
+---
+
+## ▶️ Rodando o Projeto
+
+### 1️⃣ Clone o repositório:
+```bash
+git clone https://github.com/guialmeida10/store-system.git
+```
+
+### 2️⃣ Instale as dependências:
+```bash
+npm install
+npm install --prefix ./api.login
+```
+
+### 3️⃣ Configure o Banco de Dados:
+Crie um banco de dados **MySQL** e adicione suas credenciais em um arquivo `.env` dentro de `/api.login`:
+
+```
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=sua_senha
+DB_NAME=login_db
+JWT_SECRET=chave_secreta
+```
+
+### 4️⃣ Inicie a aplicação:
+```bash
+npm run start-fullstack
+```
+
+> O Frontend (Vite) estará disponível em:  
+> 🌍 **http://localhost:5173**  
+> A API (Express) rodará em:  
+> ⚙️ **http://localhost:3000**
+
+---
+
+## 🚧 Status do Projeto
+
+🟢 **Funcional e Estável (Full Stack)**  
+🔜 **Próximos passos:** Deploy em ambiente de produção e configuração de variáveis de ambiente seguras.
 
 ---
 
 ## ✍️ Autor
 
-Desenvolvido com dedicação e aprendizado contínuo por **Guilherme Tadeu**.
+Desenvolvido com dedicação e aprendizado contínuo por:
+
+**👨‍💻 Guilherme Tadeu**  
+📫 guisardinha09@gmail.com
 
 ---
 
 ## 📝 Licença
 
-Este projeto está sob a **Licença MIT**.  
-Você pode usar, alterar e compartilhar livremente, desde que mantenha os créditos ao autor.
+Este projeto está sob a **Licença MIT** — você pode usar, modificar e distribuir livremente, desde que mantenha os créditos ao autor.
 
-> Confira o arquivo [LICENSE](LICENSE) para mais detalhes.
+> Consulte o arquivo [LICENSE](./LICENSE) para mais informações.
+
+---
+
+<p align="center">
+  Feito com ❤️ por <strong>Guilherme Almeida</strong> — Engenharia da Computação 🧠
+</p>
