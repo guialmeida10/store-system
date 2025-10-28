@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img src="./src/assets/registrar.png" alt="Tela de registro do sistema" width="700px">
+  <img src="./src/assets/registrar.png" alt="Tela de registro do sistema" width="500px">
   <br><em>Tela de registro</em>
 </p>
 
