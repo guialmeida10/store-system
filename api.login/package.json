@@ -1,0 +1,26 @@
+{
+  "name": "api.login",
+  "version": "1.0.0",
+  "description": "Express API Server for Login and Store System",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "axios": "^1.12.2",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "login-tela": "file:..",
+    "mysql2": "^3.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

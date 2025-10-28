@@ -1,24 +1,58 @@
-# Logs
+Logs e Arquivos de Build Temporários (Geral)
+
+Logs
+
 logs
-*.log
-npm-debug.log*
+.log
+npm-debug.log
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+Variáveis locais e de ambiente (CRÍTICO - SEGURANÇA)
 
-# Editor directories and files
+.env
+.env.local
+.env.*.local
+/api.login/.env
+
+DEPENDÊNCIAS
+
+Dependências do Frontend (na raiz)
+
+/node_modules
+
+Dependências do Backend (na subpasta)
+
+/api.login/node_modules
+
+ARQUIVOS DE BUILD E PASTA DE DISTRIBUIÇÃO
+
+Pasta de distribuição do Frontend (necessária para GitHub Pages, mas deve ser ignorada para repositórios limpos)
+
+Deixei o 'dist' aqui. Se você precisar do 'dist' para o GitHub Pages funcionar, remova esta linha:
+
+/dist
+/dist-ssr
+/out
+/build
+/cache
+
+ESPECÍFICOS DO SISTEMA OPERACIONAL E IDE
+
+Arquivos de Sistema
+
+.DS_Store
+Thumbs.db
+
+Arquivos de IDE (VSCode, IntelliJ, etc)
+
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
-*.ntvs*
+.ntvs
 *.njsproj
 *.sln
 *.sw?
