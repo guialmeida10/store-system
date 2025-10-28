@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   base: '/store-system/',
-})
+});
+
+//Esta configuração define o caminho base do aplicativo como '/store-system/', o que é útil ao implantar o aplicativo em um subdiretório.

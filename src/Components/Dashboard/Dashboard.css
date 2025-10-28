@@ -1,0 +1,141 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+}
+
+/* div1: formulário */
+.parent .div1 {
+  grid-column: span 5 / span 5;
+  background-color: #ffffffdd; /* leve transparência */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Este seletor busca o SEGUNDO BOTÃO dentro do .div1, ignorando os inputs */
+.parent .div1 button:nth-of-type(2) {
+    margin-left: 10px; /* Adiciona o espaçamento à esquerda */
+}
+
+.parent .div1 button:last-of-type {
+    background-color: #dc3545; /
+}
+.parent .div1 button:last-of-type:hover {
+    background-color: #c82333;
+}
+
+.parent .div1 button:first-of-type {
+    /* Cor principal para "Salvar Alterações" ou "Adicionar Produto" */
+    background-color: #4CAF50; 
+}
+.parent .div1 button:first-of-type:hover {
+    background-color: #45a049;
+}
+
+/* div2: lista de produtos */
+.parent .div2 {
+  grid-column: span 4 / span 4;
+  grid-row: span 4 / span 4;
+  grid-row-start: 2;
+  background-color: #ffffffdd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+/* div3: resumo */
+.parent .div3 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 5;
+  grid-row-start: 2;
+  background-color: #ffffffdd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.parent input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Botões principais */
+.parent button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.parent button:hover {
+  background-color: #45a049;
+}
+
+
+/* Lista de produtos */
+.parent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.parent li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Botões de ação dentro da lista */
+.parent .botoes button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.parent .botoes button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.parent .botoes button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.parent .botoes button:hover {
+  opacity: 0.9;
+}
+
+/* Pequenas melhorias de texto */
+.parent h2 {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.parent p {
+  margin: 6px 0;
+  color: #555;
+}
+
