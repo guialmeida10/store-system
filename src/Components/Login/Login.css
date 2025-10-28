@@ -101,7 +101,7 @@ button:disabled {
 }
 
 button:disabled:hover {
-  background: rgb(151, 84, 222);  /* impede mudar a cor no hover */
+  background:  rgb(151, 84, 222); /* impede mudar a cor no hover */
   cursor: not-allowed;
 }
 
