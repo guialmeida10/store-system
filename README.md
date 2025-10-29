@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7db10112-6590-439b-b8b5-929a587dede9" width="500px" alt="Tela de registro do sistema">
+  <img src="https://github.com/user-attachments/assets/7db10112-6590-439b-b8b5-929a587dede9" width="700px" alt="Tela de registro do sistema">
   <br><em>Tela de registro</em>
 </p>
 
