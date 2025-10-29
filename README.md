@@ -160,5 +160,5 @@ Este projeto está sob a **Licença MIT** — você pode usar, modificar e distr
 ---
 
 <p align="center">
-  Feito com ❤️ por <strong>Guilherme Almeida</strong> — Engenharia da Computação 🧠
+  Feito com ❤️ por <strong>Guilherme Almeida</strong> — Engenharia da Computação.
 </p>
