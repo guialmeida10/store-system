@@ -136,9 +136,9 @@ npm run start-fullstack
 
 ## 🚧 Status do Projeto
 
-🟢 **Funcional e Estável (Full Stack)**  
-📢 **OBS:** Produzir a etapa do "Esqueci minha senha" -> Desenvolver a lógica para chegar no email do usuário.
-🔜 **Próximos passos:** Deploy em ambiente de produção e configuração de variáveis de ambiente seguras.
+| 🟢 Funcional e Estável (Full Stack) | 📢 OBS | 🔜 Próximos passos |
+|-----------------------------------|--------|------------------|
+| Sistema está funcional e estável. | Produzir a etapa do "Esqueci minha senha", desenvolver a lógica para chegar no email do usuário. | Deploy em ambiente de produção e configuração de variáveis de ambiente seguras. |
 
 ---
 
