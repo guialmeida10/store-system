@@ -14,22 +14,22 @@
 </p>
 
 <p align="center">
-  <img src="./src/assets/inicio.png" alt="Tela inicial do sistema" width="700px">
+  <img src="https://github.com/user-attachments/assets/4b2b7f42-609f-4901-91f5-df1d3ba666bb" width="700px" alt="Tela inicial do sistema">
   <br><em>Tela de login</em>
 </p>
 
 <p align="center">
-  <img src="./src/assets/registrar.png" alt="Tela de registro do sistema" width="500px">
+  <img src="https://github.com/user-attachments/assets/7db10112-6590-439b-b8b5-929a587dede9" width="500px" alt="Tela de registro do sistema">
   <br><em>Tela de registro</em>
 </p>
 
 <p align="center">
-  <img src="./src/assets/dashboard.png" alt="Dashboard protegida" width="700px">
+  <img src="https://github.com/user-attachments/assets/0dc8d8ff-3612-4ae8-a177-7c84106e3346" width="700px" alt="Dashboard protegida">
   <br><em>Painel principal - Loja</em>
 </p>
 
 <p align="center">
-  <img src="./src/assets/db.png" alt="Estrutura do banco de dados MySQL" width="700px">
+  <img src="https://github.com/user-attachments/assets/2cef0fc2-2034-4d8a-ad90-7d7765389d9b" width="700px" alt="Estrutura do banco de dados MySQL">
   <br><em>Banco de dados MySQL</em>
 </p>
 
