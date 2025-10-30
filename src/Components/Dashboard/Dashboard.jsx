@@ -1,15 +1,14 @@
-// Dashboard.jsx
 import React, { useState, useEffect } from "react";
-// Importa as funções de API do arquivo vizinho
+
 import {
   buscarProdutos,
   adicionarProduto,
   editarProduto,
   excluirProduto,
   logoutUser
-} from "../login/API"; // Assumindo que este é o caminho correto
+} from "../login/API"; 
 
-import "./Dashboard.css"; // Certifique-se de que este arquivo CSS existe
+import "./Dashboard.css";
 
 // Função auxiliar para buscar o token em ambos os storages
 const getAuthToken = () => {
@@ -28,7 +27,7 @@ function Dashboard() {
 
   // Hook para carregar produtos e checar token
   useEffect(() => {
-    // 1. Redireciona para login se não houver token
+    // Redireciona para login se não houver token
     if (!token) {
       // Se não houver token, interrompe a renderização e redireciona
       window.location.href = "/";
@@ -44,7 +43,7 @@ function Dashboard() {
         setErro(null); // Limpa erros anteriores em caso de sucesso
       } catch (e) {
         console.error("Erro ao carregar produtos:", e);
-        // Em um ambiente real, um erro 401 aqui pode significar que o token expirou
+        // Define uma mensagem de erro genérica (404);
         setErro("Erro ao carregar produtos. Sua sessão pode ter expirado.");
       } finally {
         setLoading(false);
@@ -57,7 +56,6 @@ function Dashboard() {
   // Adicionar ou editar produto
   const handleSalvar = async () => {
     const nome = novoProduto.nome.trim();
-    // Garante que o preço é tratado como número flutuante
     const preco = parseFloat(novoProduto.preco);
 
     if (!nome || isNaN(preco) || preco <= 0) {
@@ -133,8 +131,7 @@ function Dashboard() {
   return (
     <div className="parent">
       <button className="logout" onClick={handleLogout}>Sair</button>
-
-      {/* Se houver um erro, mostre-o fora da área de produtos */}
+      
       {erro && <p className="erro-global">{erro}</p>}
 
       <div className="div1">
@@ -148,7 +145,6 @@ function Dashboard() {
         <input
           type="number"
           placeholder="Preço"
-          // O valor de um input type="number" é uma string, por isso usamos toString()
           value={novoProduto.preco.toString()}
           onChange={e => setNovoProduto({ ...novoProduto, preco: e.target.value })}
         />
@@ -174,10 +170,9 @@ function Dashboard() {
         ) : (
           <ul>
             {produtos.map((p, index) => (
-              // Garantimos que 'p.id' é a chave (key)
               <li key={p.id || index}>
                 <span>
-                  <strong>{p.nome}</strong> — R$ {Number(p.preco || 0).toFixed(2)} {/* ⬅️ CORREÇÃO! Garante que o preço é um número. */}
+                  <strong>{p.nome}</strong> — R$ {Number(p.preco || 0).toFixed(2)}
                 </span>
                 <div className="botoes">
                   <button onClick={() => handleEditar(index)}>✏️ Editar</button>

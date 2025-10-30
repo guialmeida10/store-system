@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-// Importe a função de login da sua API
 import { loginUser } from "./API.jsx"; 
 
 import "./Login.css";
@@ -49,7 +48,6 @@ const Login = () => {
         otherStorage.removeItem("token");
         otherStorage.removeItem("usuarioId");
         otherStorage.removeItem("nome");
-        // ----------------------------------------------------------------------
 
         // Se deu certo, navega para o dashboard
         navigate('/dashboard');
@@ -66,7 +64,6 @@ const Login = () => {
 
   return (
     <div className="container">
-      {/* Aqui vai a animação */}
       <DotLottieReact
         src="https://lottie.host/bbf0cb47-75d8-4137-b553-7ed621eb58d5/GfR0goacHa.lottie"
         loop

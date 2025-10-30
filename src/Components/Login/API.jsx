@@ -1,10 +1,7 @@
-// API.jsx (Versão Corrigida)
 const API_URL = "http://localhost:3000";
 
-// --- LOGIN / REGISTRO ---
-
 // LOGIN
-export const loginUser = async (email, senha, rememberMe) => { // ⬅️ Adicionei 'rememberMe' para ser usado na função
+export const loginUser = async (email, senha, rememberMe) => {
   try {
     const res = await fetch(`${API_URL}/auth/login`, {
       method: "POST",
@@ -15,10 +12,8 @@ export const loginUser = async (email, senha, rememberMe) => { // ⬅️ Adicion
     const data = await res.json();
 
     if (data.success && data.token) {
-      // ⬅️ Lógica MUDADA: Não salva aqui, o Login.jsx fará isso com base no rememberMe
-      // A função loginUser agora retorna os dados, e o Login.jsx decide onde salvar.
+      // Armazena o token conforme a escolha do usuário
     }
-
     return data;
   } catch (e) {
     console.error("Erro de conexão:", e);
@@ -26,9 +21,8 @@ export const loginUser = async (email, senha, rememberMe) => { // ⬅️ Adicion
   }
 };
 
-// REGISTRO (Sem alterações)
+// REGISTRO
 export const registerUser = async (nome, email, senha) => {
-  // ... (código existente)
   try {
     const res = await fetch(`${API_URL}/auth/register`, {
       method: "POST",
@@ -45,7 +39,6 @@ export const registerUser = async (nome, email, senha) => {
 
 // LOGOUT
 export const logoutUser = () => {
-  // ⬅️ MUDANÇA AQUI: Remove de AMBOS os storages para garantir limpeza
   localStorage.removeItem("token");
   localStorage.removeItem("usuarioId");
   localStorage.removeItem("nome");
@@ -56,18 +49,14 @@ export const logoutUser = () => {
 };
 
 
-// --- PRODUTOS ---
-
-// ⬅️ MUDANÇA CRUCIAL: Tenta localStorage, se não achar, tenta sessionStorage.
 const getToken = () => {
     return localStorage.getItem("token") || sessionStorage.getItem("token");
 };
 
-// BUSCAR PRODUTOS (Sem alterações internas)
+// BUSCAR PRODUTOS
 export const buscarProdutos = async () => {
   const token = getToken();
   if (!token) return [];
-  // ... (código fetch continua igual)
   try {
     const res = await fetch(`${API_URL}/produtos`, {
       headers: { Authorization: `Bearer ${token}` },
@@ -81,11 +70,10 @@ export const buscarProdutos = async () => {
   }
 };
 
-// ADICIONAR PRODUTO (Sem alterações internas)
+// ADICIONAR PRODUTO
 export const adicionarProduto = async (nome, preco) => {
   const token = getToken();
   if (!token) return { success: false, message: "Não autenticado" };
-  // ... (código fetch continua igual)
   try {
     const res = await fetch(`${API_URL}/produtos`, {
       method: "POST",
@@ -103,11 +91,10 @@ export const adicionarProduto = async (nome, preco) => {
   }
 };
 
-// EDITAR PRODUTO (Sem alterações internas)
+// EDITAR PRODUTO
 export const editarProduto = async (id, nome, preco) => {
   const token = getToken();
   if (!token) return { success: false, message: "Não autenticado" };
-  // ... (código fetch continua igual)
   try {
     const res = await fetch(`${API_URL}/produtos/${id}`, {
       method: "PUT",
@@ -125,11 +112,10 @@ export const editarProduto = async (id, nome, preco) => {
   }
 };
 
-// EXCLUIR PRODUTO (Sem alterações internas)
+// EXCLUIR PRODUTO
 export const excluirProduto = async (id) => {
   const token = getToken();
   if (!token) return { success: false, message: "Não autenticado" };
-  // ... (código fetch continua igual)
   try {
     const res = await fetch(`${API_URL}/produtos/${id}`, {
       method: "DELETE",

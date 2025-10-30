@@ -101,7 +101,7 @@ button:disabled {
 }
 
 button:disabled:hover {
-  background:  rgb(151, 84, 222); /* impede mudar a cor no hover */
+  background:  rgb(151, 84, 222); 
   cursor: not-allowed;
 }
 
@@ -113,31 +113,30 @@ button:disabled:hover {
 
 }
 
-/* Media query para telas com largura máxima de 480px (celulares) */
 @media (max-width: 480px) {
     .container {
-        width: 90%; /* ocupa quase toda a largura da tela */
-        padding: 15px; /* reduz o padding */
+        width: 90%;
+        padding: 15px; 
         border-radius: 8px;
     }
 
     .container h1 {
-        font-size: 24px; /* diminui o tamanho do título */
+        font-size: 24px;
     }
 
     .input-field {
-        height: 45px; /* reduz a altura do campo */
+        height: 45px; 
         margin: 20px auto;
     }
 
     .input-field input {
         height: 100%;
-        font-size: 14px; /* fonte menor */
+        font-size: 14px; 
         padding: 0px 40px;
     }
 
     .input-field .icon {
-        font-size: 16px; /* ícone menor */
+        font-size: 16px; 
         left: 12px;
     }
 
@@ -146,7 +145,7 @@ button:disabled:hover {
     }
 
     .container button {
-        height: 45px; /* botão menor */
+        height: 45px; 
         font-size: 14px;
     }
 

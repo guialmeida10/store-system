@@ -14,8 +14,8 @@
     align-items: center;
     min-height: 100vh;
     background-image: url("./assets/loja1.png");
-    background-position: center bottom;  /* puxa a imagem para baixo */
+    background-position: center bottom;  
     background-repeat: no-repeat;
-    background-size: cover;              /* faz a imagem cobrir todo o fundo */
+    background-size: cover;              
 }
 

@@ -6,4 +6,4 @@ export default defineConfig({
   base: '/store-system/',
 });
 
-//Esta configuração define o caminho base do aplicativo como '/store-system/', o que é útil ao implantar o aplicativo em um subdiretório.
+//Esta configuração define o caminho base do aplicativo como '/store-system/'.
